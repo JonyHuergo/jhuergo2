@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Navbar from './Navbar'
 
 const Layout = ({children}) => {
     return ( 
@@ -17,6 +18,7 @@ const Layout = ({children}) => {
             /> */}
             <title>Jonathan Huergo - Front End Developer</title>
         </Head>
+        <Navbar/>
         <main>
             {children}
         </main>
