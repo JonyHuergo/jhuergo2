@@ -8,6 +8,7 @@ export default function Home() {
     <section id="home" className='header'>
       <h1>Soy Jonathan Huergo,</h1>
       <h2>desarrollador Front End y estudiante de Ingeniería Informática</h2>
+      <a href="#contact"><button type="button" class="contact-button">CONTACTAME</button></a>
     </section>
     <About/>
     <Contact/>
