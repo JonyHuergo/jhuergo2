@@ -4,6 +4,7 @@
   --primary-clr-dk: #23262b;
   --primary-clr-lt: #282c34;
   --secondary-clr: #61dafb; /* This should be the same color as the logo */
+  --neutral-clr: white;
 }
 
 /* ///////// */
@@ -16,6 +17,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  color: var(--neutral-clr);
 }
 
 section {
@@ -45,4 +50,24 @@ nav a {
   float: left;
 }
 
+/* ///////// */
+/* Home */
+.header {
+  background-color: var(--primary-clr-lt);
+}
+/* ///////// */
+/* About */
+.about {
+  background-color: var(--primary-clr-dk);
+}
+/* ///////// */
+/* Contact */
+.contact {
+  background-color: var(--primary-clr-lt);
+}
+/* ///////// */
+/* Footer */
+footer {
+  background-color: var(--primary-clr-dk);
+}
 /* ///////// */
