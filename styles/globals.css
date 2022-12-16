@@ -1,5 +1,48 @@
+/* Variables */
+
+:root {
+  --primary-clr-dk: #23262b;
+  --primary-clr-lt: #282c34;
+  --secondary-clr: #61dafb; /* This should be the same color as the logo */
+}
+
+/* ///////// */
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  min-height: 100vh;
+}
+
+/* Navbar */
+
+nav {
+  background-color: var(--primary-clr-dk);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: sticky;
+}
+
+nav a {
+  float: right;
+  color: #fff;
+  align-items: center;
+  text-align: center;
+  padding: 2vh 2vw;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.logo {
+  float: left;
+}
+
+/* ///////// */
