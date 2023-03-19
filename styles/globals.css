@@ -4,8 +4,6 @@
 /* Variables */
 
 :root {
-  --primary-clr-dk: #23262b;
-  --primary-clr-lt: #282c34;
   --secondary-clr: #61dafb; /* This should be the same color as the logo */
   --neutral-clr: white;
 }
@@ -24,16 +22,9 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(-45deg, #12c2e9, #c471ed, #f64f59);
-  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #2376d5, #5823d5);
-  /* background: linear-gradient(-45deg, #cc2af5, #e73c7e, #23a6d5, #23d5ab); */
-  /* background: linear-gradient(-45deg, #cc2af5, #e73c7e, #1588b3, #19ad8b); */
-  /* background: linear-gradient(-45deg, #2a65a8, #2b0a79, #1F0322); */
   background-size: 600% 600%;
   animation: gradient 20s ease infinite;
-  height: 100vh;
-  /* color: #1F0322; */
   color: white;
 }
 
@@ -50,12 +41,6 @@ body {
     background-position: 0% 50%;
   }
 }
-
-/* body {
-  color: var(--neutral-clr);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-} */
 
 .info {
   background: linear-gradient(black, #1F0322);
@@ -104,7 +89,6 @@ nav a {
 /* ///////// */
 /* Home */
 .header {
-  /* background-color: var(--primary-clr-lt); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -122,24 +106,38 @@ nav a {
 }
 
 .contact-button {
-  margin-top: calc(5px + 4vw);
-  padding: 1.5% 1% 1% 1%;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: calc(7.5px + 1.5vw);
-  color: var(--secondary-clr);
-  border-width: 2px;
-  /* border-color: var(--secondary-clr); */
-  border-radius: 10px;
-  background-color: transparent;
-  align-items: center;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  margin-top: 20px;
+  --b: 5px;
+  /* border thickness */
+  --s: .5em;
+  /* size of the corner */
+  --color: white;
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 1.75em;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.contact-button:hover {
-  color: var(--primary-clr-lt);
-  border-color: var(--secondary-clr);
-  /* background-color: var(--secondary-clr); */
+.contact-button:hover,
+.contact-button:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .01em;
 }
+
+.contact-button:active {
+  background: var(--color);
+  color: #fff;
+}
+
 /* ///////// */
 /* Projects */
 .projects {
@@ -162,50 +160,3 @@ footer {
   background-color: black;
 }
 /* ///////// */
-
-/* < !-- HTML !--><button class="button-28" role="button">Button 28</button>
-
- CSS 
-.button-28 {
-  appearance: none;
-  background-color: transparent;
-  border: 2px solid #1A1A1A;
-  border-radius: 15px;
-  box-sizing: border-box;
-  color: #3B3B3B;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 16px;
-  font-weight: 600;
-  line-height: normal;
-  margin: 0;
-  min-height: 60px;
-  min-width: 0;
-  outline: none;
-  padding: 16px 24px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: 100%;
-  will-change: transform;
-}
-
-.button-28:disabled {
-  pointer-events: none;
-}
-
-.button-28:hover {
-  color: #fff;
-  background-color: #1A1A1A;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  transform: translateY(-2px);
-}
-
-.button-28:active {
-  box-shadow: none;
-  transform: translateY(0);
-} */
