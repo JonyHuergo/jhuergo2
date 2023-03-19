@@ -117,10 +117,8 @@ nav a {
 
 .contact-button {
   margin-top: 20px;
-  --b: 5px;
-  /* border thickness */
-  --s: .5em;
-  /* size of the corner */
+  --b: 5px; /* border thickness */
+  --s: .5em; /* size of the corner */
   --color: white;
   padding: calc(.5em + var(--s)) calc(.9em + var(--s));
   color: var(--color);
