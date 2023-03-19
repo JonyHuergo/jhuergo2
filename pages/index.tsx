@@ -1,7 +1,8 @@
-import Projects from './projects'
-import About from './about'
-import Contact from './contact'
+import Projects from '../components/Projects'
+import About from '../components/About'
+import Contact from '../components/Contact'
 import styles from '../styles/Home.module.css'
+import Info from '../components/Info'
 
 export default function Home() {
   return (
@@ -11,9 +12,7 @@ export default function Home() {
       <h2>desarrollador Front End y estudiante de Ingeniería Informática</h2>
       <a href="#contact"><button type="button" className="contact-button">CONTACTAME</button></a>
     </section>
-    <Projects/>
-    <About/>
-    <Contact/>
+    <Info/>
     </>
   )
 }
