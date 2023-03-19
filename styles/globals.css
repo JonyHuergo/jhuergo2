@@ -57,6 +57,10 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 } */
 
+.info {
+  background: linear-gradient(black, #1F0322);
+}
+
 section {
   min-height: 100vh;
 }
@@ -77,7 +81,7 @@ button span {
 /* Navbar */
 
 nav {
-  background-color: var(--primary-clr-dk);
+  background-color: black;
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: sticky;
@@ -139,23 +143,23 @@ nav a {
 /* ///////// */
 /* Projects */
 .projects {
-  background-color: black;
+  /* background-color: transparent; */
 }
 
 /* ///////// */
 /* About */
 .about {
-  background-color: var(--primary-clr-lt);
+  /* background-color: var(--primary-clr-lt); */
 }
 /* ///////// */
 /* Contact */
 .contact {
-  background-color: var(--primary-clr-dk);
+  /* background-color: var(--primary-clr-dk); */
 }
 /* ///////// */
 /* Footer */
 footer {
-  background-color: var(--primary-clr-lt);
+  background-color: black;
 }
 /* ///////// */
 

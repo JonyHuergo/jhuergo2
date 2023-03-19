@@ -4,11 +4,11 @@ import Contact from "./Contact";
 
 const Info = () => {
     return (
-        <>
+        <div className="info">
             <Projects/>
             <About/>
             <Contact/>
-        </>
+        </div>
     );
 }
  

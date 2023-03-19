@@ -1,6 +1,3 @@
-import Projects from '../components/Projects'
-import About from '../components/About'
-import Contact from '../components/Contact'
 import styles from '../styles/Home.module.css'
 import Info from '../components/Info'
 
