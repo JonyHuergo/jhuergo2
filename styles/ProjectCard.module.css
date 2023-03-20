@@ -1,0 +1,55 @@
+.projectCard {
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 700px;
+    height: fit-content;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    transition: width 0.3s;
+}
+
+.projectCard:hover {
+    width: 750px;
+}
+
+.projectCardImgContainer {
+    height: 50%;
+    overflow: hidden;
+}
+
+.projectCardImg {
+    width: 100%;
+    height: 100%;
+    object-position: 50% 0%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.projectCardInfoContainer {
+    text-align: center;
+    padding: 20px;
+}
+
+.projectCardInfoContainer a {
+    text-decoration: none;
+}
+
+.projectCardTitle {
+    font-size: 1.5em;
+    color: white;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 950px) {
+    .projectCard {
+        width: 90%;
+    }
+}
+
+@media (max-width: 830px) {
+    .projectCardImg {
+        margin: auto;
+        width: auto;
+        object-position: 100% 50%;
+    }
+}
