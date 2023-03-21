@@ -43,7 +43,7 @@ body {
 }
 
 .info {
-  background: linear-gradient(black, #1F0322);
+  background: linear-gradient(rgba(0, 0, 0, 0), #1F0322, black);
 }
 
 section {
@@ -151,16 +151,6 @@ nav a:hover {
   color: #fff;
 }
 
-/* ///////// */
-/* About */
-.about {
-  /* background-color: var(--primary-clr-lt); */
-}
-/* ///////// */
-/* Contact */
-.contact {
-  /* background-color: var(--primary-clr-dk); */
-}
 /* ///////// */
 /* Footer */
 footer {
