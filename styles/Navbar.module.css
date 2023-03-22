@@ -1,0 +1,24 @@
+.navbar {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.navbar a {
+    float: right;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+    padding: 2vh 2vw;
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: 0.4s;
+}
+
+.navbar a:hover {
+    color: #e73c7e;
+}
+
+.navbar .logo {
+    float: left;
+}

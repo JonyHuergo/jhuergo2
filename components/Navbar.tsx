@@ -1,12 +1,12 @@
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Navbar.module.css'
 
 const Navbar = () => {
     return ( 
-        <nav>
+        <nav className={styles.navbar}>
             <div>
-                <a href="#home" className="logo">JH</a>
+                <a href="#home" className={styles.logo}>JH</a>
             </div>
-            <div className="nav-links">
+            <div className={styles.navbarLinks}>
                 <a href="#contact">Contacto</a>
                 <a href="#about">Acerca de mi</a>
                 <a href="#projects">Proyectos</a>
