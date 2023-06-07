@@ -4,7 +4,7 @@
     width: 700px;
     height: fit-content;
     padding-bottom: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     transition: width 0.3s;
 }
 
@@ -43,13 +43,5 @@
 @media (max-width: 950px) {
     .projectCard {
         width: 90%;
-    }
-}
-
-@media (max-width: 830px) {
-    .projectCardImg {
-        margin: auto;
-        width: auto;
-        object-position: 100% 50%;
     }
 }
