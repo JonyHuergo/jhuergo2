@@ -1,5 +1,6 @@
 .about {
     padding-top: 30px;
+    padding-bottom: 50px;
 }
 
 .about h2 {
@@ -14,10 +15,13 @@
     display: flex;
     gap: 30px;
     justify-content: space-evenly;
+    display: flex;
 }
 
 .aboutPhotoContainer {
-    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .aboutTextContainer {
@@ -29,4 +33,17 @@
     width: 400px;
     margin: 0 auto;
     border-radius: 5px;
+}
+
+@media (max-width: 950px) {
+    .aboutInfoContainer {
+        flex-wrap: wrap;
+    }
+    .aboutTextContainer {
+        width: 90%;
+        text-align: justify;
+    }
+    .photo {
+        width: 90%;
+    }
 }
