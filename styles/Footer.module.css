@@ -1,0 +1,10 @@
+.footer {
+    margin: auto;
+}
+
+.footer div {
+    margin: auto;
+    border-top: 2px solid white;
+    text-align: center;
+    padding: 10px 0;
+}
