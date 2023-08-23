@@ -3,8 +3,8 @@ import styles from '../styles/Navbar.module.css'
 import { AiOutlineMenu } from 'react-icons/ai';
 
 const Navbar = () => {
-    const [showSideMenu, setShowSideMenu] = useState(false)
     const [windowWidth, setWindowWidth] = useState(0);
+    const [showMenu, setShowMenu] = useState(false);
 
     useEffect(() => {
         function handleResize() {
@@ -17,10 +17,9 @@ const Navbar = () => {
         
         return () => window.removeEventListener("resize", handleResize);
     }, []);
-    const toggleSideMenu = () => {
-        console.log(showSideMenu)
-        showSideMenu ? setShowSideMenu(false) : setShowSideMenu(true)
-    }
+    const toggleMenu = () => {
+        showMenu ? setShowMenu(false) : setShowMenu(true) 
+    };
     return (
         <nav className={styles.navbarContainer}>
             {windowWidth > 800 ?
@@ -36,18 +35,14 @@ const Navbar = () => {
                 </div>
             :
                 <div className={styles.navbarLinksMobile}>
-                    <span><a href="#home">JH</a></span>
-                    {/* <a href="#contact">Contacto</a> */}
-                    <span><a href="#about">Acerca de mi</a></span>
-                    <span><a href="#projects">Proyectos</a></span>           
-                </div>
-            }
-            
-            {(windowWidth < 800 && toggleSideMenu && false) &&
-                <div className={styles.navbarLinksMobile}>
-                    {/* <a href="#contact">Contacto</a> */}
-                    <span><a href="#about">Acerca de mi</a></span>
-                    <span><a href="#projects">Proyectos</a></span>           
+                    <div>
+                        <span className={styles.dropMenuIcon} onClick={toggleMenu}><AiOutlineMenu/></span>
+                    </div>
+                    <div className={showMenu? styles.dropMenu : styles.hide}>
+                        {/* <a href="#contact">Contacto</a> */}
+                        <span><a href="#about">Acerca de mi</a></span>
+                        <span><a href="#projects">Proyectos</a></span>           
+                    </div>      
                 </div>
             }
         </nav>

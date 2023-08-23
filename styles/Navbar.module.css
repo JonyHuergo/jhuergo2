@@ -9,25 +9,6 @@
     width: 100%;
 }
 
-.navbarMobile {
-    background-color: black;
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.navbarMobile button {
-    margin: auto;
-}
-
-.navbarMobile button svg {
-    color: white;
-    font-size: 2rem;
-}
-
 .navbar a {
     float: right;
     color: #fff;
@@ -48,8 +29,6 @@
 }
 
 .navbarLinksMobile {
-    /* position: absolute;
-    top: 56px; */
     width: 100%;
     height: fit-content;
     padding-top: 10px;
@@ -71,4 +50,19 @@
     text-decoration: none;
     font-size: 1.25rem;
     transition: 0.4s;
+}
+
+.dropMenuIcon {
+    font-size: 2rem;
+    padding-top: 10px;
+    padding-bottom: 10px !important;
+}
+
+.dropMenu {
+    transition: 2.5s ease-out;
+}
+
+.hide {
+    opacity: 0;
+    height: 0 !important;
 }
