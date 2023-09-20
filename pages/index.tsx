@@ -9,7 +9,7 @@ export default function Home() {
         <h1>Soy Jonathan Huergo,</h1>
         <h2>desarrollador Front End y estudiante de Ingeniería Informática</h2>
       </div>
-      <a href="#projects"><button type="button" className="contact-button"><b>CONTACTAME</b></button></a>
+      <a href="#contact"><button type="button" className="contact-button"><b>CONTACTAME</b></button></a>
     </section>
     <Info/>
     </>

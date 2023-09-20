@@ -28,7 +28,7 @@ const Navbar = () => {
                         <a href="#home" className={styles.logo}>JH</a>
                     </div>
                     <div className={styles.navbarLinks}>
-                        {/* <a href="#contact">Contacto</a> */}
+                        <a href="#contact">Contacto</a>
                         <a href="#about">Acerca de mi</a>
                         <a href="#projects">Proyectos</a>
                     </div>
@@ -39,9 +39,9 @@ const Navbar = () => {
                         <span className={styles.dropMenuIcon} onClick={toggleMenu}><AiOutlineMenu/></span>
                     </div>
                     <div className={showMenu? styles.dropMenu : styles.hide}>
-                        {/* <a href="#contact">Contacto</a> */}
+                        <span><a href="#projects">Proyectos</a></span> 
                         <span><a href="#about">Acerca de mi</a></span>
-                        <span><a href="#projects">Proyectos</a></span>           
+                        <span><a href="#contact">Contacto</a></span>
                     </div>      
                 </div>
             }
