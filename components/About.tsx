@@ -9,10 +9,10 @@ const About = () => {
                     <img className={styles.photo} src="me.jpg" alt="photo" />
                 </div>
                 <div className={styles.aboutTextContainer}>
-                    <p>Capacitado en el diseño e implementación de paginas web. Actualmente 
+                    <p>Capacitado en el diseño e implementación de páginas web. Actualmente 
                     profesionalizándose en Ingeniería Informática en la Universidad de Buenos Aires. Capaz 
                     de adaptarse a las necesidades de cada proyecto, trabajar independientemente o en 
-                    equipo, y de aprender nuevas tecnologías si es requerido.</p>
+                    equipo, y con ánimo de aprender nuevas tecnologías si es requerido.</p>
                 </div>
             </div>
         </section>
