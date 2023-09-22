@@ -2,30 +2,43 @@ import styles from "../styles/Contact.module.css"
 import { FaPhone } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
 import { BsLinkedin } from 'react-icons/bs';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+/*
+** Email is sent using:
+** https://web3forms.com/platforms/nextjs-contact-form
+*/
 
 const Contact = () => {
-      async function handleSubmit(event) {
-          event.preventDefault();
-          const formData = new FormData(event.target);
+    async function handleSubmit(event) {
+        event.preventDefault();
+        const formData = new FormData(event.target);
 
-          formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+        formData.append("access_key", "85600c1d-a256-4a5f-84e8-179771c57969");
 
-          const object = Object.fromEntries(formData);
-          const json = JSON.stringify(object);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
 
-          const response = await fetch("https://api.web3forms.com/submit", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json"
-              },
-              body: json
-          });
-          const result = await response.json();
-          if (result.success) {
-              console.log(result);
-          }
-      }
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+            },
+            body: json
+        });
+        const result = await response.json();
+        if (result.success) {
+            console.log(result);
+        }
+    }
+    const notify = () => {
+        toast.success("Mensaje enviado!", {
+        position: toast.POSITION.BOTTOM_LEFT,
+        autoClose: 10000
+        });
+    };
 
     return (
         <section id="contact" className={styles.contact}>
@@ -56,8 +69,9 @@ const Contact = () => {
                             <textarea name="message" id="message"></textarea>
                         </div>
                         <div className={styles.buttonContainer}>
-                            <button type="submit">Enviar Mensaje</button>
+                            <button className={styles.sendMailButton} type="submit" onClick={notify}>Enviar Mensaje</button>
                         </div>
+                        <ToastContainer />
                     </form>
                 </div>
             </div>
