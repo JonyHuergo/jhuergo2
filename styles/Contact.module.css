@@ -9,12 +9,30 @@
 }
 
 .contactContainer {
-    padding: 30px, auto;
-}
-
-.mailContainer {
+    padding: 30px, 0;
     width: 60%;
     margin: auto;
+}
+
+.contactItemsContainer span {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contactItemsContainer span a {
+    color: inherit;
+    text-decoration: inherit;
+    transition: all .5s;
+}
+
+.contactItemsContainer span a:hover {
+    color: #673FD7;
+}
+
+.contactItemsContainer p{
+    display: inline-block;
+    margin-left: 30px;
 }
 
 .mailContainer input {
@@ -55,7 +73,7 @@
 }
 
 @media (max-width: 950px) {
-    .mailContainer {
+    .contactContainer {
         width: 90%;
     }
 
@@ -65,5 +83,25 @@
 
     .buttonContainer {
         text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .contactItemsContainer span {
+        font-size: 0.8em;
+    }
+
+    .contactItemsContainer p {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .contactItemsContainer span {
+        font-size: 0.7em;
+    }
+
+    .contactItemsContainer p {
+        margin-left: 5px;
     }
 }

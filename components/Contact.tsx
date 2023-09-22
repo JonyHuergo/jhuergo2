@@ -1,4 +1,7 @@
 import styles from "../styles/Contact.module.css"
+import { FaPhone } from 'react-icons/fa';
+import { IoMdMail } from 'react-icons/io';
+import { BsLinkedin } from 'react-icons/bs';
 
 const Contact = () => {
       async function handleSubmit(event) {
@@ -28,13 +31,17 @@ const Contact = () => {
         <section id="contact" className={styles.contact}>
             <h2>CONTACTO</h2>
             <div className={styles.contactContainer}>
-                <div>
-                    {/* <ContactInfoItem icon={<MdLocalPhone/>}/>
-                    <ContactInfoItem icon={<MdEmail/>}/>
-                    <ContactInfoItem /> */}
+                <div className={styles.contactItemsContainer}>
+                    <span>
+                        <a href="https://www.linkedin.com/in/jonathan-huergo-ramos-maldonado-90260b166/" target="blank">
+                            <BsLinkedin/><p>Linkedin: Jonathan Huergo Ramos Maldonado</p>
+                        </a>
+                    </span>
+                    <span><IoMdMail/><p>Email: jh2000@hotmail.com.ar</p></span>
+                    <span><FaPhone/><p>Teléfono: 11 60178262</p></span>
                 </div>
                 <div className={styles.mailContainer}>
-                    {/* <ContactForm /> */}
+                    <h3>Contactame por mail:</h3>
                     <form onSubmit={handleSubmit}>
                         <div>
                             <label htmlFor="name">Nombre</label>
